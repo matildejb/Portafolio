@@ -1,0 +1,425 @@
+:root{
+  --main-bg-color: aliceblue;
+}
+
+body {
+  font-family: 'PT Serif', serif; 
+  margin:0;
+  padding: 0;
+  }
+
+  .wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*BARRA NAVEGACION*/
+  #navbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+      z-index: 10;
+  }  
+  
+  ul {
+    display:flex;
+    justify-content: space-around;
+    gap: 3rem;
+    list-style: none;
+    padding: 0 0.8rem;
+    font-size: 20px;
+    margin: 10px;
+   
+  }
+
+  li:hover {
+    /*box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);*/
+    transform: scale(1.1);
+    border-radius: 50%;
+    font-weight: bolder;
+   
+  }
+  
+  
+a {
+       text-decoration:none;
+       color: black;
+      
+     }
+  
+
+     /*PAGINA DE INICIO*/
+  
+  #welcome-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      height: 100vh;
+     /*background: linear-gradient(35deg, #F3BAC1, #FDFDFD, #94615E, #181719);*/
+      /* background: linear-gradient(35deg, #006766, #9CBBBC, #FDF3B8, #6A6A6A, #B6B6B6);  */
+      background-image: url("IMG/portadaPortfolio.jfif");   
+      background-repeat: no-repeat; 
+      background-size:cover;
+      position: relative;
+      
+  }
+  
+  .design {
+    width: 20rem;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+   
+  } 
+
+
+  .name {
+    font-size: 35px;
+    letter-spacing: 10px;
+    background-color: #EDCDCD;
+    border-radius: 50%;
+    width: 40%;
+    text-align: center;
+    margin-left: 12px;
+    
+    
+  }
+  
+  
+  span {
+    font-weight: bolder;
+    font-size:60px;
+    
+    
+  }
+  
+  h1 {
+     background: -webkit-linear-gradient(40deg, #68A8B0, #256C84,#122434, #172A45);
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bolder;
+    position: absolute;
+    top:75%;
+    left:15%;
+    border-radius: 10%;
+    padding: 0.5% 1%;
+    z-index: 2;
+
+  }
+  
+    /*SOBRE MI*/
+
+  #about {
+   background-color: var(--main-bg-aliceblue);
+    color: black;
+    padding: 10rem 7rem;
+    font-size: 1.2rem;
+
+ 
+  }
+   
+    .card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    h2 {
+   
+      text-align: center;
+      padding-bottom: 1rem;
+      
+      } 
+
+.foto {
+   width: 15rem;
+   border-radius: 50%;
+   position: absolute;
+   top:-24%;
+   left:70%;
+   z-index: 2;
+   animation-name: girar;
+   animation-duration: 1s;
+   animation-iteration-count: initial;
+   animation-timing-function:linear;
+   display: inline-block;
+ }
+  
+
+@keyframes girar {
+  from {
+    transform: perspective(600px) rotateY(180deg);
+  }
+  to {
+    transform: perspective(600px) rotateY(360deg);
+  }
+}
+
+    .p-about {
+      line-height: 30px;
+    }
+    
+
+    /* PROYECTOS*/
+  #projects {
+    background-color: var(--main-bg-aliceblue);
+    color: black;
+    padding: 6rem 8rem;
+    text-align: center; 
+    
+}
+
+
+  .title-p {
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 2.5rem; 
+  }
+  #container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 6.5rem;
+
+  }
+
+  .project {
+    background:rgba(2, 2, 4, 0.903); /*#006766;*/
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 500px;
+    
+  }
+
+  .project:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .project a {
+    text-decoration: none;
+    color:black;
+    
+}
+.project-img {
+height: calc(80% - 6.8rem);
+width: 100%;
+height: 90%;
+object-fit: cover;
+
+}
+
+img {
+  display: block;
+  padding: 10px;
+  border-radius: 5%
+
+}
+
+.title-projects {
+  color: white;
+  font-size: 1.1rem;
+}
+
+
+
+/*FOOTER*/
+
+#footer {
+  padding: 1.5rem 0;
+  background-color: #6A6A6A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  line-height: 50px;
+  font-size: 1.4rem;
+ 
+}
+
+.datos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem  0;
+  background-color: #6A6A6A;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 65px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  line-height: 50px;
+  
+}
+
+.logo {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 2.2rem;
+  cursor: pointer;
+
+}
+
+.linkedin {
+  font-size: 2rem;
+}
+.github {
+  font-size: 2rem;
+}
+
+.linkedin:hover {
+  transform: scale(1.1);
+}
+.github:hover {
+  transform: scale(1.1);
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color:#FDF3B8;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+
+/*PARA DISPOSITIVOS MOVILES*/
+
+
+  @media (max-width: 850px){
+   body {
+   font-size: 1.1rem;
+   font-family: 'PT Serif', serif;
+   }
+
+  
+
+    ul {
+
+      gap:1;
+      font-size: 1.2rem;
+      
+    }
+  
+
+    .design {
+     
+      width: 16rem;
+      
+    }
+
+  .name {
+  
+
+    font-size: 1.6rem;
+    letter-spacing: 10px;
+    width: 80%;
+   
+    
+  }
+  span {
+    font-size:30px;
+
+  }
+
+ h1 {
+  
+  font-size: 1.5rem;
+  top:75%;
+  left:2%;
+  z-index: 2;
+  
+ }
+
+ 
+ #about {
+   padding: 1rem;
+   line-height: 15px;
+   padding-top: 8rem;
+  
+ }
+ 
+ .foto {
+  width: 13rem;
+  border-radius: 80%;
+  position: absolute;
+  top:-15%;
+  left:50%;
+  
+
+}
+ h2 {
+  text-align: left;
+  font-weight: bolder;
+ }
+  
+   .card {
+   margin: 40px auto;
+   padding: 30px;
+   
+   }
+
+
+   #projects {
+    padding: 6rem  1rem 1rem 1rem;
+   
+    
+}
+.title-p {
+  font-size: 1.8rem; 
+}
+
+   #footer {
+    padding: 1rem 1rem;
+   
+  }
+
+
+.datos {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem;
+  margin: 10px 0px;
+  font-size: 1rem;
+  
+}
+
+
+  }
+
+
+  @media only screen and (min-width: 500px) and (max-width: 968px){ 
+  #container-grid {
+    
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
