@@ -6,12 +6,13 @@ body {
   font-family: 'PT Serif', serif; 
   margin:0;
   padding: 0;
+ 
   }
 
   .wrapper {
-    max-width: 1000px;
+    max-width: 1080px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
   }
 
   /*BARRA NAVEGACION*/
@@ -41,7 +42,6 @@ body {
   }
 
   li:hover {
-    /*box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);*/
     transform: scale(1.1);
     border-radius: 50%;
     font-weight: bolder;
@@ -57,6 +57,7 @@ a {
   
 
      /*PAGINA DE INICIO*/
+
   
   #welcome-section {
       display: flex;
@@ -64,12 +65,9 @@ a {
       justify-content: center;
       padding-top: 100px;
       width: 100%;
-      max-width: 1000px;
       margin: auto;
-      height: 100vh;
-     /*background: linear-gradient(35deg, #F3BAC1, #FDFDFD, #94615E, #181719);*/
-      /* background: linear-gradient(35deg, #006766, #9CBBBC, #FDF3B8, #6A6A6A, #B6B6B6);  */
-      background-image: url("IMG/portadaPortfolio.jfif");   
+      height: 100vh; 
+      background-image: url("IMG/fotoPortada.jpg"); 
       background-repeat: no-repeat; 
       background-size:cover;
       position: relative;
@@ -79,8 +77,8 @@ a {
   .design {
     width: 20rem;
     position: absolute;
-    top:0;
-    left:0;
+    top:25%;
+    left:35%;
     z-index:1;
    
   } 
@@ -91,10 +89,11 @@ a {
     letter-spacing: 10px;
     background-color: #EDCDCD;
     border-radius: 50%;
-    width: 40%;
+    width: 34%;
+    margin-left: 15%;
     text-align: center;
-    margin-left: 12px;
-    
+    background: -webkit-linear-gradient(40deg,#122434, #172A45);
+    color: whitesmoke;
     
   }
   
@@ -103,17 +102,16 @@ a {
     font-weight: bolder;
     font-size:60px;
     
-    
   }
   
   h1 {
      background: -webkit-linear-gradient(40deg, #68A8B0, #256C84,#122434, #172A45);
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bolder;
     position: absolute;
-    top:75%;
-    left:15%;
+    top:12%;
+    left: 30%;
     border-radius: 10%;
     padding: 0.5% 1%;
     z-index: 2;
@@ -125,7 +123,7 @@ a {
   #about {
    background-color: var(--main-bg-aliceblue);
     color: black;
-    padding: 10rem 7rem;
+    padding: 10rem 0rem;
     font-size: 1.2rem;
 
  
@@ -180,8 +178,7 @@ a {
   #projects {
     background-color: var(--main-bg-aliceblue);
     color: black;
-    padding: 6rem 8rem;
-    text-align: center; 
+    text-align: center;
     
 }
 
@@ -191,15 +188,17 @@ a {
     padding-bottom: 3rem;
     font-size: 2.5rem; 
   }
-  #container-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rem;
-    width: 100%;
-    margin: auto;
-    max-width: 1200px;
-    padding-bottom: 6.5rem;
 
+  #container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6.5rem;
+    gap: 20px;
+
+    
   }
 
   .project {
@@ -208,7 +207,8 @@ a {
     border-radius: 2px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    max-width: 500px;
+    width: 255px;
+    
     
   }
 
@@ -314,7 +314,7 @@ img {
 /*PARA DISPOSITIVOS MOVILES*/
 
 
-  @media (max-width: 850px){
+  @media (max-width: 650px){
    body {
    font-size: 1.1rem;
    font-family: 'PT Serif', serif;
@@ -330,31 +330,19 @@ img {
     }
   
 
-    .design {
-     
-      width: 16rem;
-      
-    }
-
   .name {
-  
 
-    font-size: 1.6rem;
-    letter-spacing: 10px;
     width: 80%;
    
     
   }
-  span {
-    font-size:30px;
-
-  }
+ 
 
  h1 {
   
   font-size: 1.5rem;
   top:75%;
-  left:2%;
+  left:10%;
   z-index: 2;
   
  }
@@ -390,8 +378,14 @@ img {
 
    #projects {
     padding: 6rem  1rem 1rem 1rem;
-   
     
+}
+
+.project {
+  
+  width: 200px;
+  
+  
 }
 .title-p {
   font-size: 1.8rem; 
